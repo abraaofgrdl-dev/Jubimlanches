@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Oswald", sans-serif;
+  --font-body: "Roboto", sans-serif;
+  --color-brand-primary: #F97316;
+  --color-brand-dark: #1A1A1A;
+  --color-brand-surface: #242424;
+  --color-brand-elevated: #2E2E2E;
+}
+
+:root {
+  --primary-hsl: 24, 95%, 53%;
+  --canvas-hsl: 0, 0%, 10%;
+  color-scheme: dark;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: #1A1A1A;
+  color: #F3F4F6;
+}
+
+h1, h2, h3, h4, .font-display {
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #141414;
+}
+::-webkit-scrollbar-thumb {
+  background: #333333;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #F97316;
+}
+
+/* Thermal printer 80mm / 58mm POS receipt styles */
+@media print {
+  @page {
+    size: 80mm auto;
+    margin: 0;
+  }
+  
+  html, body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  body * {
+    visibility: hidden !important;
+  }
+
+  #thermal-print-area, #thermal-print-area * {
+    visibility: visible !important;
+  }
+
+  #thermal-print-area {
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: 80mm !important;
+    margin: 0 auto !important;
+    padding: 8px !important;
+    background: #ffffff !important;
+    color: #000000 !important;
+    font-family: 'Courier New', Courier, monospace !important;
+  }
+}
+
+

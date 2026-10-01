@@ -1,0 +1,8 @@
+{
+  "name": "Jubim Lanches",
+  "description": "Cardápio online e sistema de pedidos do Jubim Lanches em Jubim, Pará. Lanches na chapa quente e bebidas geladas.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
